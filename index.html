@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="header__list">
+        <li class="header__item"></li>
+        <li class="header__item"></li>
+        <li class="header__item header__item_active">Поездки</li>
+      </ul>
+      <button class="header__btn">
+        Заболоцкий К.О <img src="./image/icons/arrow.svg" alt="logout" />
+      </button>
+    </header>
+
+    <section class="my-trip">
+      <h2 class="my-trip__title">Мои поездки</h2>
+      <button class="my-trip__btn">
+        <img
+          class="my-trip__icon"
+          src="./image/icons/plus.svg"
+          alt="plus"
+        />Оформить поездку
+      </button>
+    </section>
+    <main class="main">
+      <section class="filters">
+        <div class="filters__wrapper custom-date">
+          <label for="date-from">Период с:</label>
+          <div class="custom-date__input-from">
+            <input type="date" id="date-from" value="2024-02-22" />
+            <span class="custom-date__from-clear"></span>
+            <span class="custom-date__from-calendar"></span>
+            <span class="custom-date__placeholder-from">Выбрать...</span>
+          </div>
+          <label for="date-to">по:</label>
+          <div class="custom-date__input-to">
+            <input type="date" id="date-to" />
+            <span class="custom-date__to"></span>
+            <span class="custom-date__placeholder-to">Выбрать...</span>
+          </div>
+
+          <div class="search-element">
+            <input
+              class="search-element__search"
+              type="text"
+              placeholder="Поиск..."
+            />
+          </div>
+
+          <button class="filters__btn">
+            <img src="./image/icons/close-blue.svg" alt="clear" /> Сбросить все
+          </button>
+        </div>
+
+        <label class="filters__archive section-archive">
+          <input
+            type="checkbox"
+            id="checkbox"
+            class="section-archive__real-checkbox"
+          />
+          <span class="section-archive__custom-checkbox"></span>
+          <span class="section-archive__text-checkbox">
+            Показать архивные поездки
+          </span>
+        </label>
+      </section>
+
+      <section class="progress">
+        <div class="progress__line"></div>
+      </section>
+
+      <table class="trip-table">
+        <tbody class="trip-table__body">
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000115</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000117</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000074</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <div class="city-container">
+                <span
+                  data-text="Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград"
+                  class="city-text"
+                >
+                  Кременчуг-Константиновское, Петропавловск-Камчатский,
+                  Новосибирск, Волгоград
+                </span>
+              </div>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000115</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000211</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000118</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000119</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000120</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000133</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000133</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+          <tr class="trip-table__row">
+            <td class="trip-table__number">
+              <h3 class="trip-table__subtitle">№ поездки</h3>
+              <a class="trip-table__link" href="#">000133</a>
+            </td>
+            <td class="trip-table__date">
+              <h3 class="trip-table__subtitle">Дата поездки</h3>
+              <span>22.02.2024 - 27.02.2024</span>
+            </td>
+            <td class="trip-table__sum">
+              <h3 class="trip-table__subtitle">Сумма, план</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__sum-fact">
+              <h3 class="trip-table__subtitle">Сумма, факт</h3>
+              <span>29 400,00</span>
+            </td>
+            <td class="trip-table__city">
+              <h3 class="trip-table__subtitle">Город</h3>
+              <span>Москва, Ярославль, Ижевск, Владимир</span>
+            </td>
+            <td class="trip-table__status">
+              <h3 class="trip-table__subtitle">Статус</h3>
+              <button class="trip-table__btn">Документы</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
